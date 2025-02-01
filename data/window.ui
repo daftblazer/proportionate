@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
+  <template class="AspectRatioCopyWindow" parent="AdwApplicationWindow">
+    <property name="title">Proportionate</property>
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="AdwHeaderBar">
+            <child type="end">
+              <object class="GtkMenuButton">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">primary_menu</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesPage">
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">Folders</property>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Source Folder</property>
+                    <property name="subtitle">Select the folder containing your images</property>
+                    <child>
+                      <object class="GtkButton" id="source_button">
+                        <property name="label">Choose Folder</property>
+                        <property name="valign">center</property>
+                        <style>
+                          <class name="suggested-action"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Destination Folder</property>
+                    <property name="subtitle">Select where to copy matching images</property>
+                    <child>
+                      <object class="GtkButton" id="dest_button">
+                        <property name="label">Choose Folder</property>
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <property name="title">Aspect Ratio Settings</property>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Target Ratio</property>
+                    <property name="subtitle">Select a preset ratio or choose custom</property>
+                    <child>
+                      <object class="GtkDropDown" id="ratio_dropdown">
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwEntryRow" id="custom_ratio_row">
+                    <property name="title">Custom Ratio</property>
+                    <property name="visible">false</property>
+                    <child>
+                      <object class="GtkEntry" id="custom_ratio_entry">
+                        <property name="placeholder-text">Enter ratio (e.g., 0.75)</property>
+                        <property name="input-purpose">number</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwActionRow">
+                    <property name="title">Tolerance</property>
+                    <property name="subtitle">How much variation to allow from target ratio</property>
+                    <child>
+                      <object class="GtkLabel" id="tolerance_value">
+                        <property name="label">0.10</property>
+                        <property name="margin-end">12</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkScale" id="tolerance_scale">
+                        <property name="width-request">200</property>
+                        <property name="adjustment">
+                          <object class="GtkAdjustment">
+                            <property name="lower">0.01</property>
+                            <property name="upper">0.5</property>
+                            <property name="value">0.1</property>
+                            <property name="step-increment">0.01</property>
+                            <property name="page-increment">0.05</property>
+                          </object>
+                        </property>
+                        <property name="digits">2</property>
+                        <property name="draw-value">false</property>
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="margin-start">12</property>
+            <property name="margin-end">12</property>
+            <property name="margin-top">12</property>
+            <property name="margin-bottom">12</property>
+            <property name="spacing">12</property>
+            <child>
+              <object class="GtkButton" id="start_button">
+                <property name="label">Start Processing</property>
+                <property name="sensitive">false</property>
+                <style>
+                  <class name="suggested-action"/>
+                  <class name="pill"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkProgressBar" id="progress_bar">
+                <property name="show-text">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="status_label">
+                <property name="label">Ready</property>
+                <property name="xalign">0</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="vexpand">true</property>
+            <child>
+              <object class="GtkListView" id="results_list">
+                <style>
+                  <class name="navigation-sidebar"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label">About</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

@@ -1,0 +1,7 @@
+/var/mnt/data/Documents/Projects/proportionate/build/CMakeFiles/aspect-ratio-copy.dir
+/var/mnt/data/Documents/Projects/proportionate/build/CMakeFiles/edit_cache.dir
+/var/mnt/data/Documents/Projects/proportionate/build/CMakeFiles/rebuild_cache.dir
+/var/mnt/data/Documents/Projects/proportionate/build/CMakeFiles/list_install_components.dir
+/var/mnt/data/Documents/Projects/proportionate/build/CMakeFiles/install.dir
+/var/mnt/data/Documents/Projects/proportionate/build/CMakeFiles/install/local.dir
+/var/mnt/data/Documents/Projects/proportionate/build/CMakeFiles/install/strip.dir

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.example.AspectRatioCopy</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Aspect Ratio Copy</name>
+  <summary>Copy images with specific aspect ratios</summary>
+  
+  <description>
+    <p>
+      A utility application that helps you copy images from a source folder to a 
+      destination folder based on their aspect ratios. It supports common preset ratios
+      like portrait, landscape, and widescreen, as well as custom ratios.
+    </p>
+    <p>
+      Features:
+      - Preset aspect ratios for common formats
+      - Custom ratio support
+      - Adjustable tolerance for ratio matching
+      - Real-time progress tracking
+      - Detailed results view showing processed images
+    </p>
+  </description>
+  
+  <developer_name>daftblazer</developer_name>
+  <update_contact></update_contact>
+  
+  <content_rating type="oars-1.1" />
+  
+  <releases>
+    <release version="1.0" date="2024-01-31">
+      <description>
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
+</component>

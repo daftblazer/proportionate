@@ -1,0 +1,1 @@
+/usr/bin/cc "CMakeFiles/aspect-ratio-copy.dir/src/main.c.o" "CMakeFiles/aspect-ratio-copy.dir/resources.c.o" -o aspect-ratio-copy  -ladwaita-1 -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lcairo-gobject -lcairo -lvulkan -lgraphene-1.0 -lgio-2.0 -lgdk_pixbuf-2.0 -lgobject-2.0 -lglib-2.0 -lpthread
